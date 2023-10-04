@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+    <title> Gustavo Gabriel</title>
+
+</head>
+<body>
+    <header>
+        <h1>AnimesLegais</h1>
+        <span>
+            By: Gugu
+        </span>
+    </header>
+    
+    <img src="./one-piece-luffy.gif" alt="Gifzins" id="gif">
+    
+    <div class="img">
+        <div class="holder">
+            <h1>
+                    Melhores Animes 
+            </h1>
+            <img src="./imagem1.png">
+        </div>
+    </div>
+    <h2>TOP 1</h2>
+    <p>"One Piece" é um mangá e anime sobre Monkey D. Luffy em busca do tesouro lendário "One Piece" para se tornar o Rei dos Piratas. A série apresenta uma jornada épica com uma tripulação diversa, batalhas emocionantes e um mundo vasto cheio de aventuras. Com mais de 1.000 capítulos e 900 capítulos, "One Piece" conquistou uma base de fãs globalmente.
+    </p>
+    <div class="link">
+        <a href='https://www.youtube.com/watch?v=LHTYpWI3S6Q' target="blank">Trailers</a>
+    </div>
+    
+    <script>
+        const img = document.querySelectorAll("img")[1]
+        const text = document.querySelector('p')
+        const h2 = document.querySelector('h2')
+        const a = document.querySelector('a')
+
+      
+        img.addEventListener("click", mudar)
+        var num = 1
+        function mudar() {
+            if(num < 4 ){
+               num++
+               if (num == 2) {
+                   text.innerHTML = '"Jujutsu Kaisen" é um mangá e anime que segue a história de Yuji Itadori, um estudante que se envolve com feitiçaria e maldições após engolir um dedo amaldiçoado. Ele se junta à Escola Técnica de Jujutsu de Tóquio para lutar contra maldições e proteger as pessoas. A série combina ação intensa, horror sobrenatural e personagens cativantes em um universo repleto de batalhas entre feiticeiros e criaturas malignas.'
+                   h2.innerText = 'TOP 2'
+                   a.href = 'https://www.youtube.com/watch?v=ynr6gnyu9NE'
+               }
+               if (num == 3) {
+                   text.innerHTML = '"Demon Slayer" é um mangá e anime que acompanha a jornada de Tanjiro Kamado, um jovem que se torna um caçador de demônios após sua família ser massacrada por criaturas malignas. Ele se une à organização dos Caçadores de Demônios para vingar sua família e encontrar a cura para sua irmã, que se tornou uma demoníaca. Com uma atmosfera atmosférica, a série oferece ação intensa, emoção e uma busca emocionante pela redenção e justiça..'
+                   h2.innerText = 'TOP 3'
+                   a.href = 'https://www.youtube.com/watch?v=YhrA6hjQbTw'
+
+               } 
+               if (num == 4) {
+                   text.innerHTML = '"Boku no Hero" é uma popular série de mangá e anime criada por Kohei Horikoshi. Situada em um mundo onde a maioria das pessoas possui superpoderes, segue a jornada de Izuku Midoriya, um jovem determinado a se tornar o maior herói de todos os tempos, mesmo sendo inicialmente sem poderes. Com a ajuda do lendário herói All Might, Izuku embarca em uma aventura cheia de ação, amizade e superação pessoal.'
+                   h2.innerText = 'TOP 4'
+                   a.href = 'https://www.youtube.com/watch?v=RugjT3HYbes'
+               }    
+           }else{
+                num = 1 
+                text.innerHTML = 'One Piece" é um mangá e anime sobre Monkey D. Luffy em busca do tesouro lendário "One Piece" para se tornar o Rei dos Piratas. A série apresenta uma jornada épica com uma tripulação diversa, batalhas emocionantes e um mundo vasto cheio de aventuras. Com mais de 1.000 capítulos e 900 capítulos, "One Piece" conquistou uma base de fãs globalmente.'
+                h2.innerText = 'TOP 1'
+                a.href = 'https://www.youtube.com/watch?v=LHTYpWI3S6Q'
+
+           }
+           img.src=`imagem${num}.png`
+        }
+    </script>
+
+</body>
+</html>
